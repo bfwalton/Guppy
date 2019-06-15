@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,8 +64,18 @@
                                             <action selector="deleteRequestPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Oy-s4-yEO"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbH-v1-P0j">
+                                        <rect key="frame" x="146" y="236" width="83" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="MDp-6W-qx2"/>
+                                        </constraints>
+                                        <state key="normal" title="Custom Log"/>
+                                        <connections>
+                                            <action selector="addCustomLogPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lMM-z2-Z46"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6a-za-9y4">
-                                        <rect key="frame" x="144" y="236" width="87" height="100"/>
+                                        <rect key="frame" x="144" y="295" width="87" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="xxZ-gf-kOl"/>
                                         </constraints>
@@ -75,16 +85,16 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tNR-OH-pnr">
-                                        <rect key="frame" x="64.5" y="351" width="246" height="271"/>
+                                        <rect key="frame" x="64.5" y="410" width="246" height="212"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toggle Shake To Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hve-i4-45s">
-                                                <rect key="frame" x="0.0" y="125.5" width="172" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="96" width="172" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNx-VF-49A">
-                                                <rect key="frame" x="197" y="120" width="51" height="31"/>
+                                                <rect key="frame" x="197" y="90.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="showOnShakeToggled:" destination="vXZ-lx-hvc" eventType="valueChanged" id="eRC-Ex-pS8"/>
                                                 </connections>

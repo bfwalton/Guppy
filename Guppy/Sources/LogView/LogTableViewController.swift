@@ -75,11 +75,11 @@ class LogTableViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == String(describing: LogDetailTableViewController.self) {
-            
-            let sessions = LogTableViewBuilder.getSections(from: selectedLogItem as! Session)
-            
-            let logDetailTableViewController = segue.destination as! LogDetailTableViewController
-            logDetailTableViewController.collapsibleSections = sessions
+            if let session = selectedLogItem as? Session {
+                let sessions = LogTableViewBuilder.getSections(from: session)
+                let logDetailTableViewController = segue.destination as! LogDetailTableViewController
+                logDetailTableViewController.collapsibleSections = sessions
+            }
         }
     }
 }
@@ -97,11 +97,21 @@ extension LogTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: SessionLogItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         
-        cell.setUp(domainSections[indexPath.section].rows[indexPath.row] as! LogItem & Session)
-        
-        return cell
+        if let session = domainSections[indexPath.section].rows[indexPath.row] as? LogItem & Session {
+            let cell: SessionLogItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.setUp(session)
+            return cell
+        } else {
+            let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
+            cell.textLabel?.text = domainSections[indexPath.section].rows[indexPath.row].details
+            
+            let date = domainSections[indexPath.section].rows[indexPath.row].date
+            cell.detailTextLabel?.text = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .medium)
+            
+            cell.selectionStyle = .none
+            return cell
+        }
     }
 }
 
@@ -123,9 +133,10 @@ extension LogTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        selectedLogItem = domainSections[indexPath.section].rows[indexPath.row]
-        
-        performSegue(withIdentifier: String(describing: LogDetailTableViewController.self), sender: self)
+        if let item = domainSections[indexPath.section].rows[indexPath.row] as? Session & LogItem {
+            selectedLogItem = item
+            performSegue(withIdentifier: String(describing: LogDetailTableViewController.self), sender: self)
+        }
     }
 }
 

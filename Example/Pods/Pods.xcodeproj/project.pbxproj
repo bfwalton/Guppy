@@ -31,6 +31,7 @@
 		6E8BB6C4C37F97FC43243DC991729F19 /* LogTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F87C1BB280650328A9A5ADF5D894417 /* LogTableViewController.storyboard */; };
 		71353A14D1F9218135CB9BAB7D9217FB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F097425DB843F00384F9050CCDADB /* Session.swift */; };
 		7EB21C99860AA7AE384EC757D158D6C3 /* AirDropTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B979813C0059711F7F62E8EA83C0C4 /* AirDropTextDataSource.swift */; };
+		8048A18122B5880C00A0CA4D /* CustomLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8048A18022B5880C00A0CA4D /* CustomLog.swift */; };
 		84FE801B749D1A669CA47CC8F2DCECD1 /* UITableView+NibRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49861449275A2D187D13F2A422ADDC55 /* UITableView+NibRegister.swift */; };
 		880AF619C26B0944130A47CD54AAE211 /* Guppy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F12452B09422D86990C1DD9DC2DBF /* Guppy.swift */; };
 		970B97387573B4EBF6B82D0AC5F2E569 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD41FCBAF61CCADC78D469DFA9FACFC1 /* Row.swift */; };
@@ -106,6 +107,7 @@
 		78D7F12D91E742A14BEB4575BEFB20A8 /* CollapsibleHeaderView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CollapsibleHeaderView.xib; sourceTree = "<group>"; };
 		7B6F12452B09422D86990C1DD9DC2DBF /* Guppy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Guppy.swift; path = Guppy/Sources/Guppy.swift; sourceTree = "<group>"; };
 		7F87C1BB280650328A9A5ADF5D894417 /* LogTableViewController.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = LogTableViewController.storyboard; path = Guppy/Sources/LogView/LogTableViewController.storyboard; sourceTree = "<group>"; };
+		8048A18022B5880C00A0CA4D /* CustomLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLog.swift; sourceTree = "<group>"; };
 		85AD28F73295D0F5AB78CA847BE5F97C /* UIWindow+Motion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIWindow+Motion.swift"; sourceTree = "<group>"; };
 		883402F76CD50BE65A1B90D484086732 /* Guppy.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Guppy.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8B64E3D146F4131D958915FED96B48AD /* LogDetailTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LogDetailTableViewController.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 		E617B9AAC05D3F7270C77CF76EC039CE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8048A18022B5880C00A0CA4D /* CustomLog.swift */,
 				63B979813C0059711F7F62E8EA83C0C4 /* AirDropTextDataSource.swift */,
 				A96BCC96201C64D96B1C7ACE2723BC77 /* CollapsibleSection.swift */,
 				69E2F33F92CD3EF424D6AC2EFB07608E /* Colors.swift */,
@@ -543,6 +546,7 @@
 				011E99C29A1A4265226CF4044408FBAA /* Guppy-dummy.m in Sources */,
 				880AF619C26B0944130A47CD54AAE211 /* Guppy.swift in Sources */,
 				DFFD5FB9FEF7C855132630B357C292CC /* LogDetailTableViewCell.swift in Sources */,
+				8048A18122B5880C00A0CA4D /* CustomLog.swift in Sources */,
 				08A03E1F06C19D8F895E8B3A7B3DDC9C /* LogDetailTableViewController.swift in Sources */,
 				3C7BCF92A7DF13864CCB61AD124AF047 /* LogItem.swift in Sources */,
 				9942981A91BE101187FA69ABEC57A99D /* LogTableViewBuilder.swift in Sources */,

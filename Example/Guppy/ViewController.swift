@@ -93,6 +93,10 @@ class ViewController: UIViewController {
             }.resume()
     }
     
+    @IBAction func addCustomLogPressed() {
+        Guppy.shared.log("Custom Log", details: "faslkfjaslk;fjasldjf;lasdjf;lksadjfl;kajsd;lkfjasl;kfjas;lkdjfl;kasdjflkajs;lkfjthis is the custom log")
+    }
+    
     @IBAction func showOnShakeToggled(_ sender: UISwitch) {
         Guppy.shared.showOnShake = sender.isOn
     }
@@ -100,6 +104,5 @@ class ViewController: UIViewController {
     @IBAction func openGuppy() {
         Guppy.shared.presentLogViewController()
     }
-    
 }
 

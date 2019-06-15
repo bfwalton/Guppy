@@ -47,6 +47,10 @@ public class Guppy {
     public func log(_ logItem: LogItem) {
         logItems.append(logItem)
     }
+    
+    public func log(_ section: String, details: String) {
+        logItems.append(CustomLog(section: section, details: details))
+    }
 
     public func presentLogViewController() {
         guard var topViewController = UIApplication.shared.keyWindow?.rootViewController else {
